@@ -12,7 +12,6 @@ public class Score implements Comparable<Score>{
 	}
 	public int compareTo(Score o) {
 		return this.getSize() - o.getSize();
-		
 	}
 	public PApplet getApp() {
 		return app;
@@ -25,5 +24,20 @@ public class Score implements Comparable<Score>{
 	}
 	public void setSize(int size) {
 		this.size = size;
+	}
+	public void draw(int x, int y) {
+		switch (this.color) {
+		case "azul":
+			app.fill(0,0,200);
+			break;
+		case "verde":
+			app.fill(0,200,0);
+			break;
+		case "rojo":
+	app.fill(200,0,0);
+	break;
+		}
+		app.text(name, x, y);
+		app.rect(y+ 100, y, size, 30);
 	}
 }

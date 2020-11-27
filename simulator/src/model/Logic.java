@@ -91,7 +91,7 @@ public void removeIElemt(int i) {
 	peopleI.remove(i);
 }
 
-public void removeHealthy() {
+public void contact() {
 	for (int i = 0; i < peopleI.size(); i++) {
 		for (int l = 0; l < peopleH.size(); l++) {
 			float p;
@@ -117,7 +117,6 @@ public void clockCheck() {
 		peopleI.get(i).getTimer();
 	  }
 }
-
 public void highInfectedPorcent(){
 	if(peopleI.size()>=30) {
 		//segundo mensaje de esepcion

@@ -20,7 +20,9 @@ int timer;
 	public int getTimer() {
 		return timer;
 	}
-	public void setTimer(int timer) {
+	public void setTimer() {
 		this.timer++;
 	}
+	
+	
 }
