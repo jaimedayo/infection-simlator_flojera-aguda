@@ -25,7 +25,7 @@ public class Logic {
 		
 		people = new LinkedList<Person>();
 		
-		arrayStrings = app.loadStrings("../data/textOne.txt");
+		arrayStrings = app.loadStrings("../data/instructions.txt");
 		
 
 		for (int i = 0; i < arrayStrings.length; i++) {

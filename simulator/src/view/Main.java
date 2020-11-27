@@ -11,4 +11,16 @@ public class Main extends PApplet {
 		// TODO Auto-generated method stub
 		PApplet.main(Main.class.getName());
 	}
+	public void setting() {
+		
+	}
+	public void setup() {
+		
+	}
+	public void draw() {
+		
+	}
+	public void mouseClicked() {
+		
+	}
 }
