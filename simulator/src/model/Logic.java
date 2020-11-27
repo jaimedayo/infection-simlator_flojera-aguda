@@ -29,9 +29,10 @@ public class Logic {
 		peopleI = new ArrayList<Infected>();
 		peopleH = new ArrayList<Healthy>();
 		peopleR = new ArrayList<Recovered>();
-		
+	}
+		public void read() {
 		arrayStrings = app.loadStrings("../data/instructions.txt");
-	
+		
 		for (int i = 0; i < arrayStrings.length; i++) {
 			String lineString = arrayStrings[i];
 			String [] arrayWord = lineString.split(":");
@@ -42,18 +43,18 @@ public class Logic {
 				int amount  = Integer.parseInt(arrayWord[1]);
 				
 				switch (state) {
-				case "sanas":
+				case "infectadas":
 					for (int k = 0; k < amount; k++) {
 						addHeathy(Random(10,490), Random(210,700), 1, 1);
 					}
 					break;
-				case "infectadas":
-					for (int k = 0; k < amount; k++) {
+				case "sanas":
+					for (int p = 0; p < amount; p++) {
 						addInfected(Random(10,490), Random(210,700), 1, 1);
 					}
 					break;
 				case "recuperadas":
-					for (int k = 0; k < amount; k++) {
+					for (int r = 0; r < amount; r++) {
 					addRecovered(Random(10,490), Random(210,700), 1, 1);	
 					}
 					break;
@@ -63,13 +64,14 @@ public class Logic {
 		}
 		//crear el score
 	}
-private void addRecovered(float random, float random2, float i, float j) {
-		// TODO Auto-generated method stub
-		
-	}
-private int Random(int i, int j) {
-		// TODO Auto-generated method stub
-		return 0;
+private float Random(int i, int j) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+private void addRecovered(float posX,float posY,float dirX,float dirY) {
+	Person obj;
+	obj= new Recovered(posX, posY, dirX, dirY, app);
+	peopleR.add((Recovered) obj);
 	}
 public void addHeathy(float posX,float posY,float dirX,float dirY) {
 	Person obj;

@@ -48,4 +48,15 @@ public class Controller {
 		return logic.getScore();
 		 
 	}
+
+	public void sortScore(int s){
+		logic.sortScore(s);
+		
+	}
+
+	public void genrate() {
+		logic.read();
+		logic.createScore();
+		
+	}
 }

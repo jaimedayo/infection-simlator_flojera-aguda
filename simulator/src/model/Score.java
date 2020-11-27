@@ -38,6 +38,6 @@ public class Score implements Comparable<Score>{
 	break;
 		}
 		app.text(name, x, y);
-		app.rect(y+ 100, y, size, 30);
+		app.rect(x+ 100, y, size, 30);
 	}
 }

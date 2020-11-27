@@ -23,13 +23,17 @@ private Controller control;
 	}
 	public void setup() {
 	control = new Controller(this);
-		
+	control.genrate();
+	System.out.println(control.getPersonH().size());
+	System.out.println(control.getPersonI().size());
+	System.out.println(control.getPersonR().size());
+	
 	}
 	public void draw() {
 		sec= second();
-		background(0);
-		fill(0);
-		rect(100,100,100,100);
+		background(250);
+		
+		
 		 if(sec > time) {
 			  time=sec;
 			 control.clock();
@@ -48,13 +52,16 @@ private Controller control;
 				r.draw();
 			}
 		 for (int i = 0; i < control.getScore().size(); i++) {
-				Score r= control.getScore().get(i);
-				r.draw(20,(60*i)+10);
+				Score s= control.getScore().get(i);
+				s.draw(20,(60*i)+10);
 			}
 		 
 control.contac();
 	}
 	public void mouseClicked() {
+		int s=0;
+		
+		control.sortScore(s);
 		
 	}
 }
