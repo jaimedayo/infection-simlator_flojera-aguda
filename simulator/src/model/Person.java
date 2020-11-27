@@ -27,5 +27,15 @@ public void move() {
 		posX=posX+2*dirX;
 		posY=posX+2*dirY;
 }
-
+public PApplet getApp() {
+	return app;
+}public float getDirX() {
+	return dirX;
+}public float getDirY() {
+	return dirY;
+}public float getPosX() {
+	return posX;
+}public float getPosY() {
+	return posY;
+}
 }
